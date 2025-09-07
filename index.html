@@ -35,54 +35,85 @@
 
 <body class="poppins-font">
     <!-- Navbar -->
-    <nav class="bg-[#EDF6FF]">
-        <div class="navbar  w-10/12 mx-auto">
-            <div class="flex-1">
-                <div class="flex items-center gap-2">
-                    <p>English</p>
+    <nav class="bg-[#EDF6FF] ">
+        <div class="navbar w-10/12 mx-auto">
+            <div class="navbar-start">
+                <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                    </div>
+                    <ul tabindex="0"
+                        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+                        <button class="flex items-center gap-2  ">
+                            <img src="./assets/fa-circle-question.png" alt="">
+                            <p> FAQ</p>
+                        </button>
+
+                        <button class="flex items-center gap-2  ">
+                            <img src="./assets/fa-book-open.png" alt="">
+                            <p> Learn</p>
+                        </button>
+
+                        <button class="flex items-center gap-2  ">
+                            <img src="./assets/fa-arrow-right-from-bracket.png" alt="">
+                            <p> Logout</p>
+                        </button>
+                    </ul>
+                </div>
+                <div class="flex items-center gap-2 ">
+                    <p class="font-bold">English</p>
                     <img src="./assets/logo.png" alt="">
                     <p class="hind-siliguri">জানালা</p>
                 </div>
             </div>
-            <div class="flex gap-4">
-                <button class="flex items-center gap-2 btn border-[#422AD5] border-2">
-                    <img src="./assets/fa-circle-question.png" alt="">
-                    <p> FAQ</p>
-                </button>
 
-                <button class="flex items-center gap-2 btn border-[#422AD5] border-2">
-                    <img src="./assets/fa-book-open.png" alt="">
-                    <p> Learn</p>
-                </button>
+            <div class="hidden md:flex justify-end w-full">
+                <div class="flex gap-4">
+                    <button class="flex items-center gap-2 btn border-[#422AD5] border-2">
+                        <img src="./assets/fa-circle-question.png" alt="">
+                        <p> FAQ</p>
+                    </button>
 
-                <button class="flex items-center gap-2 btn border-[#422AD5] border-2">
-                    <img src="./assets/fa-arrow-right-from-bracket.png" alt="">
-                    <p> Logout</p>
-                </button>
+                    <button class="flex items-center gap-2 btn border-[#422AD5] border-2">
+                        <img src="./assets/fa-book-open.png" alt="">
+                        <p> Learn</p>
+                    </button>
+
+                    <button class="flex items-center gap-2 btn border-[#422AD5] border-2">
+                        <img src="./assets/fa-arrow-right-from-bracket.png" alt="">
+                        <p> Logout</p>
+                    </button>
+                </div>
             </div>
         </div>
-
     </nav>
     <!-- nav end -->
     <!-- banner start -->
     <section class="w-10/12 mx-auto">
-        <div class="flex justify-center items-center">
-            <div class="flex flex-col gap-y-5">
-                <h1 class="text-[#00BCFF] font-bold text-5xl">English <span class="text-[#18181B]">is
+        <div class="md:flex-row flex flex-col-reverse  justify-center items-center md:text-left text-center md:my-32">
+            <div class="flex flex-col gap-y-5 mb-20 md:mb-0">
+                <h1 class="text-[#00BCFF] font-bold md:text-5xl text-3xl md:mt-0 mt-5">English <span
+                        class="text-[#18181B]">is
                         Easy!!</span>
                 </h1>
-                <p class="text-[#18181B] font-medium text-2xl w-1/2">আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি
+                <p class="text-[#18181B] font-medium md:text-2xl md:w-2/3 ">আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন।
+                    আপনি
                     যদি
                     নতুন
                     হন অথবা আপনার দক্ষতা
                     বাড়াতে চান, আমাদের
                     Interactive Lessons আপনাকে নিয়ে যাবে অন্য একটি Level এ</p>
-                <input class="w-2/5" type="text" placeholder=" Enter Your Name">
-                <input class="w-2/5" type="password" placeholder=" Enter Your Password">
-                <button class="btn text-white bg-[#422AD5] rounded-lg w-1/6">Get Started</button>
+                <input class="w-2/5 mx-auto md:mx-0" type="text" placeholder=" Enter Your Name">
+                <input class="w-2/5 mx-auto md:mx-0" type="text" placeholder=" Enter Your Password">
+                <button class="btn text-white bg-[#422AD5] rounded-lg md:w-1/6 w-2/5 mx-auto md:mx-0">Get
+                    Started</button>
             </div>
             <div>
-                <img src="./assets/hero-student.png" alt="">
+                <img class="md:w-full w-8/12 mx-auto" src="./assets/hero-student.png" alt="">
             </div>
         </div>
     </section>
@@ -97,35 +128,8 @@
             <h1 class="text-[#00BCFF] font-bold text-4xl">Let's <span class="text-[#18181B]">Learn
                     Vocabularies</span>
             </h1>
-            <div class="flex gap-5">
-                <button class="flex items-center gap-2 btn border-[#422AD5] border-2 text-[#422AD5]">
-                    <img src="./assets/fa-book-open.png" alt="">
-                    Lesson - 1
-                </button>
-                <button class="flex items-center gap-2 btn border-[#422AD5] border-2 text-[#422AD5]">
-                    <img src="./assets/fa-book-open.png" alt="">
-                    Lesson - 2
-                </button>
-                <button class="flex items-center gap-2 btn border-[#422AD5] border-2 text-[#422AD5]">
-                    <img src="./assets/fa-book-open.png" alt="">
-                    Lesson - 3
-                </button>
-                <button class="flex items-center gap-2 btn border-[#422AD5] border-2 text-[#422AD5]">
-                    <img src="./assets/fa-book-open.png" alt="">
-                    Lesson - 4
-                </button>
-                <button class="flex items-center gap-2 btn border-[#422AD5] border-2 text-[#422AD5]">
-                    <img src="./assets/fa-book-open.png" alt="">
-                    Lesson - 5
-                </button>
-                <button class="flex items-center gap-2 btn border-[#422AD5] border-2 text-[#422AD5]">
-                    <img src="./assets/fa-book-open.png" alt="">
-                    Lesson - 6
-                </button>
-                <button class="flex items-center gap-2 btn border-[#422AD5] border-2 text-[#422AD5]">
-                    <img src="./assets/fa-book-open.png" alt="">
-                    Lesson - 7
-                </button>
+            <!-- level btn -->
+            <div id="lessonLevelBtn" class="flex gap-5 flex-wrap justify-center items-center mx-auto w-full">
             </div>
 
         </div>
@@ -176,14 +180,11 @@
     </section>
     <!-- faq end -->
     <!-- footer start -->
-
-
-
     <footer class="footer bg-base-200 text-base-content border-base-300 border-t px-10 py-4">
         <aside class="grid-flow-col items-center">
             <div class="flex flex-col">
                 <div class="flex items-center gap-2">
-                    <p>English</p>
+                    <p class="font-bold">English</p>
                     <img src="./assets/logo.png" alt="">
                     <p class="hind-siliguri">জানালা</p>
 
@@ -213,6 +214,42 @@
         </nav>
     </footer>
 
+
+
+    <script>
+
+        const loadLessons = () => {
+            fetch('https://openapi.programming-hero.com/api/levels/all')
+                .then(res => res.json())
+                .then(data => displayLesson(data.data))
+        }
+        const displayLesson = (lesson) => {
+            console.log(lesson);
+            const lessonLevelBtnContainerDiv = document.getElementById('lessonLevelBtn')
+            lesson.forEach(element => {
+                const button = document.createElement('button')
+                button.classList.add(
+                    'flex',
+                    'justify-center',
+                    'items-center',
+                    'gap-2',
+                    'btn',
+                    'border-[#422AD5]',
+                    'border-2'
+                )
+                button.innerHTML = `
+                 <img src="./assets/fa-book-open.png" alt="">
+                   ${element.lessonName} - ${element.level_no}
+                `
+                lessonLevelBtnContainerDiv.appendChild(button)
+
+            });
+
+
+        }
+        loadLessons()
+
+    </script>
 </body>
 
 </html>
