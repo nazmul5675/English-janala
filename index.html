@@ -115,8 +115,8 @@
                     হন অথবা আপনার দক্ষতা
                     বাড়াতে চান, আমাদের
                     Interactive Lessons আপনাকে নিয়ে যাবে অন্য একটি Level এ</p>
-                <input class="w-2/5 mx-auto md:mx-0" type="text" placeholder=" Enter Your Name">
-                <input class="w-2/5 mx-auto md:mx-0" type="text" placeholder=" Enter Your Password">
+                <input class=" input w-2/5 mx-auto md:mx-0" type="text" placeholder=" Enter Your Name">
+                <input class="input w-2/5 mx-auto md:mx-0" type="text" placeholder=" Enter Your Password">
                 <button class="btn text-white bg-[#422AD5] rounded-lg md:w-1/6 w-2/5 mx-auto md:mx-0">Get
                     Started</button>
             </div>
@@ -142,7 +142,22 @@
 
         </div>
         <!-- loading container -->
-
+        <!-- search start -->
+        <section class="flex justify-center items-center my-20">
+            <label class="input">
+                <svg class="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2.5" fill="none"
+                        stroke="currentColor">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.3-4.3"></path>
+                    </g>
+                </svg>
+                <input id="inputSearch" type="search" required placeholder="Search" />
+            </label>
+            <button id="btnSearch" class="btn btn-primary join-item"><i class="fa-solid fa-magnifying-glass"></i>
+                search</button>
+        </section>
+        <!-- search end -->
         <div id="amni" class="w-10/12 mx-auto bg-[#F8F8F8] text-center p-10 rounded-xl mt-10">
 
             <section id="spiner1" class="flex justify-center items-center mx-auto  hidden">
@@ -162,7 +177,6 @@
         </div>
         <!-- modal -->
         <!-- Open the modal using ID.showModal() method -->
-        <!-- <button class="btn" onclick="my_modal_5.showModal()">open modal</button> -->
         <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
             <div class="modal-box">
                 <div id="modalDiv">
