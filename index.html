@@ -21,6 +21,8 @@
     <!-- daisy ui and tailwind cdn  -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- font-awesome cdn-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
     <style>
         .poppins-font {
@@ -29,6 +31,11 @@
 
         .hind-siliguri {
             font-family: "Hind Siliguri", sans-serif;
+        }
+
+        .active {
+            background: #422ad5;
+            color: white;
         }
     </style>
 </head>
@@ -100,7 +107,8 @@
                         class="text-[#18181B]">is
                         Easy!!</span>
                 </h1>
-                <p class="text-[#18181B] font-medium md:text-2xl md:w-2/3 ">আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন।
+                <p class="text-[#18181B] font-medium md:text-2xl md:w-2/3  hind-siliguri">আজ থেকেই আপনার ভাষা শেখার
+                    যাত্রা শুরু করুন।
                     আপনি
                     যদি
                     নতুন
@@ -117,7 +125,6 @@
             </div>
         </div>
     </section>
-
     <!-- banner end  -->
 
     <!-- let's learn section start -->
@@ -129,16 +136,49 @@
                     Vocabularies</span>
             </h1>
             <!-- level btn -->
-            <div id="lessonLevelBtn" class="flex gap-5 flex-wrap justify-center items-center mx-auto w-full">
+            <div id="lessonLevelBtn" class="flex gap-5 flex-wrap justify-center items-center mx-auto w-full  ">
+
             </div>
 
         </div>
-        <!-- lesson container -->
-        <div class="w-10/12 mx-auto bg-[#F8F8F8] text-center py-20 rounded-xl mt-10">
-            <p>আপনি এখনো কোন Lesson Select করেন নি</p>
-            <h1>একটি Lesson Select করুন।</h1>
+        <!-- loading container -->
+
+        <div id="amni" class="w-10/12 mx-auto bg-[#F8F8F8] text-center p-10 rounded-xl mt-10">
+
+            <section id="spiner1" class="flex justify-center items-center mx-auto  hidden">
+                <span class="loading loading-spinner text-info loading-xl"></span>
+            </section>
+            <!-- loading container -->
+            <!-- lesson container -->
+            <div id="wordContainer" class="grid  sm:grid-cols-3 grid-cols-1 gap-10">
+
+                <div
+                    class="bg-slate-100 flex flex-col justify-center items-center mx-auto w-full rounded-xl py-10 col-span-3">
+                    <p class="text-base">আপনি এখনো কোন Lesson Select করেন নি</p>
+                    <h1 class="text-3xl hind-siliguri font-bold">একটি Lesson Select করুন।</h1>
+                </div>
+
+            </div>
         </div>
+        <!-- modal -->
+        <!-- Open the modal using ID.showModal() method -->
+        <!-- <button class="btn" onclick="my_modal_5.showModal()">open modal</button> -->
+        <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+            <div class="modal-box">
+                <div id="modalDiv">
+
+                </div>
+                <div class="modal-action">
+                    <form method="dialog">
+                        <!-- if there is a button in form, it will close the modal -->
+                        <button class="btn bg-blue-900 text-white">Complete Learning</button>
+                    </form>
+                </div>
+            </div>
+        </dialog>
+        <!-- modal end -->
     </section>
+
     <!-- let's learn section end -->
     <!-- faq start -->
     <section class="w-10/12 mx-auto">
@@ -216,40 +256,19 @@
 
 
 
+
     <script>
 
-        const loadLessons = () => {
-            fetch('https://openapi.programming-hero.com/api/levels/all')
-                .then(res => res.json())
-                .then(data => displayLesson(data.data))
-        }
-        const displayLesson = (lesson) => {
-            console.log(lesson);
-            const lessonLevelBtnContainerDiv = document.getElementById('lessonLevelBtn')
-            lesson.forEach(element => {
-                const button = document.createElement('button')
-                button.classList.add(
-                    'flex',
-                    'justify-center',
-                    'items-center',
-                    'gap-2',
-                    'btn',
-                    'border-[#422AD5]',
-                    'border-2'
-                )
-                button.innerHTML = `
-                 <img src="./assets/fa-book-open.png" alt="">
-                   ${element.lessonName} - ${element.level_no}
-                `
-                lessonLevelBtnContainerDiv.appendChild(button)
-
-            });
 
 
-        }
-        loadLessons()
+
+
+
+
+
 
     </script>
+    <script src="./index.js"></script>
 </body>
 
 </html>
